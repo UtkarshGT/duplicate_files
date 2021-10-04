@@ -10,6 +10,6 @@ for file_name in file_names:
 
 df = pd.DataFrame({'file_name': file_names, 'file_size': file_sizes})
 
-duplicates = df.duplicated(subset='file_size', keep='last')
+duplicates = df.duplicated(subset='file_size')
 
 print(df[duplicates])
